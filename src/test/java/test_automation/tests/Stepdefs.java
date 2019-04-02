@@ -1,4 +1,4 @@
-package test_automation;
+package test_automation.tests;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
