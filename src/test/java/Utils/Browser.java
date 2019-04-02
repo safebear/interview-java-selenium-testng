@@ -16,10 +16,10 @@ import java.util.concurrent.TimeUnit;
 public class Browser {
 
     // Get our WebApp URL from the Maven command or the CI pipeline
-    protected static final String URL = System.getProperty("url", "http://www.calculator.net");
+    protected static final String URL = System.getProperty("url", "http://toolslist.safebear.co.uk:8080/");
 
     // Get our browser from the Maven command or the CI pipeline
-    private static final String BROWSERNAME = System.getProperty("browser", "chrome_headless");
+    private static final String BROWSERNAME = System.getProperty("browser", "chrome");
     private static final String OS = System.getProperty("os", "MAC");
 
 
@@ -93,7 +93,7 @@ public class Browser {
 
             case ("CHROME_HEADLESS"):
 
-                System.out.println(" Executing on CHROME");
+                System.out.println(" Executing on CHROME HEADLESS");
 
                 chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("headless");

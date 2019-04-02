@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'tests', defaultValue: 'RunCukes', description: 'cucumber tests')
+        string(name: 'tests', defaultValue: 'RunCucumberTest', description: 'cucumber tests')
         string(name: 'url', defaultValue: 'http://toolslist.safebear.co.uk:8080', description: 'test environment')
         string(name: 'browser', defaultValue: 'headless', description: 'chrome headless')
         string(name: 'wait', defaultValue: '10', description: 'wait time in seconds')
@@ -39,13 +39,20 @@ pipeline {
             steps {
                 sh "mvn -Dtest=${params.tests} test -Durl=${params.url} -Dbrowser=${params.browser} -DwaitTime=${params.wait}"
             }
+
+        }
+
+        stage('Generate HTML report'){
+            steps {
+                sh "mvn cluecumber-report:reporting"
+            }
             post {
                 always {
                     publishHTML([
                             allowMissing         : false,
                             alwaysLinkToLastBuild: false,
                             keepAll              : false,
-                            reportDir            : 'target/cucumber',
+                            reportDir            : 'target/generated-report',
                             reportFiles          : 'index.html',
                             reportName           : 'BDD Report',
                             reportTitles         : ''])
