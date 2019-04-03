@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    tools {
+        maven 'Maven 3.6.0'
+    }
+
     parameters {
         string(name: 'tests', defaultValue: 'RunCucumberTest', description: 'cucumber tests')
         string(name: 'url', defaultValue: 'http://toolslist.safebear.co.uk:8080', description: 'test environment')
