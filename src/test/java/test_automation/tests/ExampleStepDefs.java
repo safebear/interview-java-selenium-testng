@@ -42,6 +42,8 @@ public class ExampleStepDefs extends Browser {
         //Step1 ACTION: Open our web application in the browser
         browser.navigate().to(getURL());
         Assert.assertEquals("Login Page", loginPage.getPageTitle());
+
+        // List<list> data = table.raw();
     }
 
     @When("I enter the login details for a {string}")
