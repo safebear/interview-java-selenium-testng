@@ -21,22 +21,15 @@ pipeline {
             steps {
                 sh "mvn -Dtest=${params.tests} clean test -Durl=${params.url} -Dbrowser=${params.browser} -DwaitTime=${params.wait}"
             }
-
-        }
-
-        stage('Generate HTML report'){
-            steps {
-                sh "mvn cluecumber-report:reporting"
-            }
             post {
                 always {
                     publishHTML([
                             allowMissing         : false,
                             alwaysLinkToLastBuild: false,
                             keepAll              : false,
-                            reportDir            : 'target/generated-report',
+                            reportDir            : 'target/surefire-reports',
                             reportFiles          : 'index.html',
-                            reportName           : 'BDD Report',
+                            reportName           : 'TestNG Report',
                             reportTitles         : ''])
                 }
             }
