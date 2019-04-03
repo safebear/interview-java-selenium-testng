@@ -12,7 +12,7 @@ import test_automation.pages.ExampleToolsPage;
 
 import java.net.MalformedURLException;
 
-public class Example_Stepdefs extends Browser {
+public class ExampleStepDefs extends Browser {
 
 
     ExampleLoginPage loginPage;
