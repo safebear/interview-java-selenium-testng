@@ -8,6 +8,7 @@ public class TestData {
 
     private String username;
     private String password;
+    private String validationMessage;
 
     @Override
     public String toString() {
@@ -16,6 +17,7 @@ public class TestData {
         return "TestData{" +
                 " username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", validationMessage='" + validationMessage + '\'' +
                 '}';
 
     }

@@ -2,11 +2,13 @@
   "dataSet": [
     {
       "username": "attacker",
-      "password": "dontletmein"
+      "password": "dontletmein",
+      "validationMessage": "Username or Password is incorrect"
     },
     {
       "username": "tester",
-      "password": "letmein"
+      "password": "letmein",
+      "validationMessage": "Login Successful"
     }
   ]
 }

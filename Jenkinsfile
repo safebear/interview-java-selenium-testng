@@ -7,7 +7,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'tests', defaultValue: 'RunCucumberTest', description: 'cucumber tests')
+        string(name: 'tests', defaultValue: 'testng', description: 'testng tests')
         string(name: 'url', defaultValue: 'http://toolslist.safebear.co.uk:8080', description: 'test environment')
         string(name: 'browser', defaultValue: 'CHROME_HEADLESS', description: 'chrome headless')
         string(name: 'wait', defaultValue: '10', description: 'wait time in seconds')
@@ -16,31 +16,6 @@ pipeline {
     triggers { pollSCM('* * * * *') } // poll the source code repo every minute.
 
     stages {
-
-//        stage('Start Selenium Server Hub'){
-//            steps {
-//                sh "cd src/test/resources/selenium_server/"
-//                sh "launch-hub.sh &"
-//            }
-//        }
-//
-//        stage('Start Selenium Server Firefox Node'){
-//
-//            steps {
-//                sh "cd src/test/resources/selenium_server/"
-//                sh "launch-firefox-node.sh &"
-//            }
-//
-//        }
-//
-//        stage('Start Selenium Server Chrome Node'){
-//
-//            steps {
-//                sh "cd src/test/resources/selenium_server/"
-//                sh "launch-chrome-node.sh &"
-//            }
-//
-//        }
 
         stage('BDD Requirements Testing') {
             steps {

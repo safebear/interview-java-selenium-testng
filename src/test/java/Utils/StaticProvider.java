@@ -1,9 +1,10 @@
 package Utils;
 
 import com.google.common.reflect.TypeToken;
-import gherkin.deps.com.google.gson.Gson;
-import gherkin.deps.com.google.gson.JsonElement;
-import gherkin.deps.com.google.gson.JsonParser;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import org.testng.annotations.DataProvider;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,8 +14,7 @@ public class StaticProvider {
 
     private static final String FILENAME = System.getProperty("dataset","ExampleTestData.json" );
 
-    // Uncomment this out when using TestNG
-    // @DataProvider(name = "testProducts")
+    @DataProvider(name = "testProducts")
     public static Object[][] createData() throws FileNotFoundException {
         JsonElement jsonData = new JsonParser().parse(new FileReader("src/test/resources/test_data/" + FILENAME));
         JsonElement dataSet = jsonData.getAsJsonObject().get("dataSet");

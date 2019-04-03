@@ -1,6 +1,9 @@
 package test_automation.tests.testng;
 
 import Utils.Waits;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import org.testng.annotations.*;
 import test_automation.pages.ExampleLoginPage;
 import test_automation.pages.ExampleToolsPage;
 
@@ -12,8 +15,7 @@ public class ExampleBaseTest extends Waits {
     ExampleLoginPage loginPage = new ExampleLoginPage();
     ExampleToolsPage toolsPage = new ExampleToolsPage();
 
-    // Uncomment this out if using TestNG
-    // @BeforeTest
+    @BeforeTest
     public void  setUp(){
 
         try {
@@ -23,14 +25,12 @@ public class ExampleBaseTest extends Waits {
         }
     }
 
-    // Uncomment this out if using TestNG
-    // @BeforeMethod
+    @BeforeMethod
     public void setUpTest(){
         browser.navigate().to(getURL());
     }
 
-    // Uncomment this out if using TestNG
-    // @AfterTest
+    @AfterTest
     public void tearDown(){
 
         browser.quit();
