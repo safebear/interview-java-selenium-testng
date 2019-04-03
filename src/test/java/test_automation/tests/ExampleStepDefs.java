@@ -32,11 +32,7 @@ public class ExampleStepDefs extends Browser {
 
     @After
     public void tearDown(){
-        try {
-            Thread.sleep(Integer.parseInt(System.getProperty("sleep","2000")));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         //This closes the browser after each section
         browser.quit();
     }

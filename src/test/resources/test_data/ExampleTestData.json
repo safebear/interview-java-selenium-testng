@@ -1,0 +1,12 @@
+{
+  "dataSet": [
+    {
+      "username": "attacker",
+      "password": "dontletmein"
+    },
+    {
+      "username": "tester",
+      "password": "letmein"
+    }
+  ]
+}
