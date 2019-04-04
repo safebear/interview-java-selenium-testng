@@ -4,7 +4,7 @@
 <suite name="Example Suite" verbose="1" >
     <test name="Example Test">
         <classes>
-            <class name="test_automation.tests.testng.ExampleTestNgTest"/>
+            <class name="test_automation.tests.testng.ExampleTestNgTestCsv"/>
         </classes>
     </test>
 </suite>
