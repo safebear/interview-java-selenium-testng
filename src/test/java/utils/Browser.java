@@ -96,6 +96,8 @@ public class Browser {
 
                 chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("headless");
+                chromeOptions.addArguments("window-size=1920,1080");
+                chromeOptions.addArguments("start-maximized");
                 cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                 cap.setBrowserName("chrome");
 
