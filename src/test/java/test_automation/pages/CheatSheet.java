@@ -14,10 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Calendar;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.net.URL;
 
 public class CheatSheet extends Waits {
@@ -413,6 +410,24 @@ public class CheatSheet extends Waits {
         // Right click
         actions.contextClick(elementLocator).perform();
 
+    }
+
+    /**
+     * Switch to a new tab
+     */
+    public void switchToANewTab(){
+
+
+        ArrayList<String> tabs2 = new ArrayList<String> (browser.getWindowHandles());
+
+        // Switch to new tab
+        browser.switchTo().window(tabs2.get(1));
+
+        // Close new tab
+        browser.close();
+
+        // Switch back again
+        browser.switchTo().window(tabs2.get(0));
     }
 
 }
