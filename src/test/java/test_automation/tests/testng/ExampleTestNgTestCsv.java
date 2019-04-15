@@ -1,7 +1,6 @@
 package test_automation.tests.testng;
 
-import Utils.CsvDataProvider;
-import Utils.TestData;
+import utils.CsvDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

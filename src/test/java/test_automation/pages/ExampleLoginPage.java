@@ -1,7 +1,7 @@
 package test_automation.pages;
 
-import Utils.Waits;
-import test_automation.pages.Locators.ExampleLoginPageLocators;
+import utils.Waits;
+import test_automation.pages.locators.ExampleLoginPageLocators;
 
 public class ExampleLoginPage extends Waits {
 

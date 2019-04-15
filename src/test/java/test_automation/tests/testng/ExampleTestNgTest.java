@@ -1,7 +1,7 @@
 package test_automation.tests.testng;
 
-import Utils.StaticProvider;
-import Utils.TestData;
+import utils.StaticProvider;
+import utils.TestData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

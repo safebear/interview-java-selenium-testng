@@ -1,6 +1,6 @@
 package test_automation.pages;
 
-import Utils.Waits;
+import utils.Waits;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

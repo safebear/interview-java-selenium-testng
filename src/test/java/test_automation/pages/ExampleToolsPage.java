@@ -1,7 +1,7 @@
 package test_automation.pages;
 
-import Utils.Waits;
-import test_automation.pages.Locators.ExampleToolsPageLocators;
+import utils.Waits;
+import test_automation.pages.locators.ExampleToolsPageLocators;
 
 public class ExampleToolsPage extends Waits{
 

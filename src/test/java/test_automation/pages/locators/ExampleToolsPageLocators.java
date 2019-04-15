@@ -1,4 +1,4 @@
-package test_automation.pages.Locators;
+package test_automation.pages.locators;
 
 import lombok.Data;
 import org.openqa.selenium.By;

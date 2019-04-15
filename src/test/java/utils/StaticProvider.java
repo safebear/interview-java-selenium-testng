@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;

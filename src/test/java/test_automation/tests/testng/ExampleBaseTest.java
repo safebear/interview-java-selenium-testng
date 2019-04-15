@@ -1,6 +1,6 @@
 package test_automation.tests.testng;
 
-import Utils.Waits;
+import utils.Waits;
 import org.testng.annotations.*;
 import test_automation.pages.ExampleLoginPage;
 import test_automation.pages.ExampleToolsPage;
