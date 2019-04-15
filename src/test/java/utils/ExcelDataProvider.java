@@ -2,7 +2,7 @@ package utils;
 
 import org.testng.annotations.DataProvider;
 
-public class CsvDataProvider {
+public class ExcelDataProvider {
 
     @DataProvider(name = "testProductsCsv")
     public static Object[][] Authentication() throws Exception{

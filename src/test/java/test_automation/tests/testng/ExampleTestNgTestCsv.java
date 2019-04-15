@@ -1,12 +1,12 @@
 package test_automation.tests.testng;
 
-import utils.CsvDataProvider;
+import utils.ExcelDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ExampleTestNgTestCsv extends ExampleBaseTest {
 
-    @Test(dataProvider = "testProductsCsv", dataProviderClass = CsvDataProvider.class)
+    @Test(dataProvider = "testProductsCsv", dataProviderClass = ExcelDataProvider.class)
     public void loginTest(String username, String password, String message){
 
         Assert.assertEquals("Login Page", loginPage.getPageTitle());
